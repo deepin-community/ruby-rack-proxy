@@ -1,0 +1,25 @@
+Bug-Upstream: https://github.com/ncr/rack-proxy/issues/63
+
+Index: ruby-rack-proxy/test/rack_proxy_test.rb
+===================================================================
+--- ruby-rack-proxy.orig/test/rack_proxy_test.rb
++++ ruby-rack-proxy/test/rack_proxy_test.rb
+@@ -28,12 +28,12 @@ class RackProxyTest < Test::Unit::TestCa
+     assert_match(/Jacek Becela/, last_response.body)
+   end
+ 
+-  def test_http_full_request_headers
+-    app(:streaming => false)
+-    app.host = 'www.google.com'
+-    get "/"
+-    assert !Array(last_response['Set-Cookie']).empty?, 'Google always sets a cookie, yo. Where my cookies at?!'
+-  end
++#  def test_http_full_request_headers
++#    app(:streaming => false)
++#    app.host = 'www.google.com'
++#    get "/"
++#    assert !Array(last_response['Set-Cookie']).empty?, 'Google always sets a cookie, yo. Where my cookies at?!'
++#  end
+ 
+   def test_https_streaming
+     app.host = 'www.apple.com'

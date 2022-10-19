@@ -1,0 +1,16 @@
+ruby-rack-proxy (0.6.1-2) unstable; urgency=medium
+
+  [ Sergio Durigan Junior ]
+  * Prevent testcases that access the internet to run.
+    Some testcases (test/http_streaming_response_test.rb and
+    test/rack_proxy_test.rb) try to access the internet, but that is
+    against Debian Policy guidelines, and therefore we need to disable
+    them. (Closes: #860198)
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 03 Mar 2018 21:50:24 +0530
+
+ruby-rack-proxy (0.6.1-1) unstable; urgency=medium
+
+  * Initial release (Closes: #859878)
+
+ -- Pirate Praveen <praveen@debian.org>  Tue, 11 Apr 2017 12:06:38 +0530
